@@ -1,0 +1,364 @@
+/* Accessibility CSS */
+
+/* High Contrast Mode */
+body.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+body.high-contrast .navbar,
+body.high-contrast .card,
+body.high-contrast .service-card,
+body.high-contrast .timeline-content,
+body.high-contrast .order-form-container,
+body.high-contrast .accessibility-panel {
+    background-color: #000 !important;
+    border: 1px solid #fff !important;
+    box-shadow: none !important;
+}
+
+body.high-contrast .animated-background {
+    display: none !important;
+}
+
+body.high-contrast .hero-section,
+body.high-contrast .services-section,
+body.high-contrast .order-section,
+body.high-contrast .how-works-section {
+    background-color: #000 !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast p,
+body.high-contrast a,
+body.high-contrast span,
+body.high-contrast label {
+    color: #fff !important;
+}
+
+body.high-contrast .nav-link,
+body.high-contrast .footer a {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+body.high-contrast .btn {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+body.high-contrast .btn-primary,
+body.high-contrast .btn-outline:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+body.high-contrast .form-control {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+body.high-contrast svg path {
+    fill: #fff !important;
+    stroke: #fff !important;
+}
+
+body.high-contrast .service-icon,
+body.high-contrast .timeline-icon {
+    background-color: #333 !important;
+}
+
+body.high-contrast .timeline::after {
+    background-color: #fff !important;
+}
+
+body.high-contrast .timeline-dot {
+    background-color: #fff !important;
+}
+
+body.high-contrast .footer {
+    background-color: #000 !important;
+    border-top: 1px solid #fff !important;
+}
+
+body.high-contrast .section-header h2::after,
+body.high-contrast .footer h3::after {
+    background-color: #fff !important;
+}
+
+/* Text Size Adjustments */
+body.larger-text {
+    font-size: 18px !important;
+}
+
+body.larger-text h1 {
+    font-size: 54px !important;
+}
+
+body.larger-text h2 {
+    font-size: 42px !important;
+}
+
+body.larger-text h3 {
+    font-size: 30px !important;
+}
+
+body.larger-text p,
+body.larger-text a,
+body.larger-text span,
+body.larger-text label,
+body.larger-text input,
+body.larger-text textarea,
+body.larger-text button {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+}
+
+body.larger-text .btn {
+    padding: 15px 35px !important;
+}
+
+body.smaller-text {
+    font-size: 14px !important;
+}
+
+body.smaller-text h1 {
+    font-size: 38px !important;
+}
+
+body.smaller-text h2 {
+    font-size: 28px !important;
+}
+
+body.smaller-text h3 {
+    font-size: 20px !important;
+}
+
+body.smaller-text p,
+body.smaller-text a,
+body.smaller-text span,
+body.smaller-text label,
+body.smaller-text input,
+body.smaller-text textarea,
+body.smaller-text button {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Focus Styles */
+:focus {
+    outline: 3px solid var(--primary-color) !important;
+    outline-offset: 3px !important;
+}
+
+/* Skip Navigation */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px 15px;
+    z-index: 10000;
+    transition: top 0.2s ease;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* ARIA roles and screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Form Labels - ensuring they are visible */
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* Keyboard Navigation */
+a:focus, button:focus, input:focus, 
+[tabindex]:focus {
+    box-shadow: 0 0 0 3px rgba(57, 103, 92, 0.5) !important;
+    outline: none !important;
+}
+
+/* Animation Control for Vestibular Disorders */
+body.no-animation * {
+    animation: none !important;
+    transition: none !important;
+}
+
+body.no-animation .animated-background {
+    display: none !important;
+}
+
+/* Improve readability */
+body.accessible-fonts {
+    font-family: Arial, Helvetica, sans-serif !important;
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.16em !important;
+}
+
+/* Responsive Accessibility */
+@media (max-width: 767px) {
+    body.larger-text h1 {
+        font-size: 36px !important;
+    }
+    
+    body.larger-text h2 {
+        font-size: 30px !important;
+    }
+    
+    body.larger-text h3 {
+        font-size: 24px !important;
+    }
+}
+
+/* נגישות מקלדת משופרת */
+*:focus-visible {
+    outline: 3px solid #f9a826 !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 3px rgba(249, 168, 38, 0.5) !important;
+    transition: all 0.2s !important;
+}
+
+.btn:focus, 
+.nav-link:focus,
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #f9a826 !important;
+    outline-offset: 3px !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* טיפוגרפיה נגישה */
+body.readable-text {
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.16em !important;
+    line-height: 1.8 !important;
+}
+
+body.readable-text p,
+body.readable-text li,
+body.readable-text label {
+    line-height: 1.8 !important;
+    margin-bottom: 1.2em !important;
+}
+
+body.readable-text h1,
+body.readable-text h2,
+body.readable-text h3 {
+    line-height: 1.5 !important;
+}
+
+/* ניגודיות גבוהה - בהירות */
+body.light-contrast {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.light-contrast .navbar,
+body.light-contrast .service-card,
+body.light-contrast .timeline-content,
+body.light-contrast .order-form-container,
+body.light-contrast .footer,
+body.light-contrast .accessibility-panel {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+}
+
+body.light-contrast .btn,
+body.light-contrast .nav-link,
+body.light-contrast a,
+body.light-contrast h1,
+body.light-contrast h2,
+body.light-contrast h3,
+body.light-contrast h4,
+body.light-contrast h5,
+body.light-contrast h6 {
+    color: #000000 !important;
+}
+
+body.light-contrast .btn-primary,
+body.light-contrast .btn-outline {
+    border: 2px solid #000000 !important;
+    background-color: #ffffff !important;
+}
+
+body.light-contrast .form-control {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+body.light-contrast .timeline-dot {
+    background-color: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+/* סגנונות עבור טקסט חלופי מוצג */
+.show-alt-text img {
+    position: relative;
+}
+
+.show-alt-text img::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background: rgba(57, 103, 92, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* שיפור ניידות מקלדת */
+.keyboard-accessible *:focus {
+    outline: 3px solid #f9a826 !important;  
+    outline-offset: 3px !important;
+}
+
+.keyboard-accessible .nav-link:focus::after {
+    width: 100% !important;
+}
+
+.access-btn-reset {
+    background-color: #f9a826 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    border: 1px solid #e69113 !important;
+    border-radius: 5px !important;
+    margin-top: 10px !important;
+}
+
+.access-btn-reset:hover {
+    background-color: #e69113 !important;
+    transform: scale(1.05) !important;
+} 

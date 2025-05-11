@@ -1,0 +1,771 @@
+/* Animations CSS */
+
+/* Animated Background */
+@keyframes floating {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes floating-reverse {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(20px) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.shape {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+
+.shape1 {
+    animation-name: floating;
+}
+
+.shape2 {
+    animation-name: floating-reverse;
+    animation-delay: 2s;
+}
+
+.shape3 {
+    animation-name: floating;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+.shape4 {
+    animation-name: floating-reverse;
+    animation-duration: 12s;
+}
+
+/* Hover Animations */
+.btn {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.service-card {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1 !important;
+}
+
+.service-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 20px 40px rgba(57, 103, 92, 0.3);
+    border-color: var(--primary-light);
+}
+
+.service-card:hover .service-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: gentle-pulse 1.5s infinite ease-in-out;
+}
+
+.service-card:hover .service-svg path {
+    fill: white;
+    stroke: white;
+    animation: svg-spin 3s ease-in-out;
+    transform-origin: center;
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+    color: white;
+}
+
+/* SVG Animations */
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill-opacity: 0;
+    }
+    to {
+        fill-opacity: 1;
+    }
+}
+
+.service-svg path, .timeline-svg path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    stroke: var(--primary-color);
+    stroke-width: 1;
+    fill-opacity: 1;
+    /* Always show SVG, not just on hover */
+    animation: dash 3s ease forwards, fill 2s ease forwards;
+}
+
+/* Add default pulsing animation for SVG */
+@keyframes gentle-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.service-icon, .timeline-icon {
+    animation: gentle-pulse 3s infinite ease-in-out;
+}
+
+/* Enhanced Hover Animation for Service Cards */
+@keyframes card-hover {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-15px) scale(1.05);
+    }
+}
+
+@keyframes svg-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Fix for service-card visibility issue */
+.service-card, .animate-on-scroll.slide-up {
+    opacity: 1 !important;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+}
+
+.fade-in.animated {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up.animated {
+    animation: slideUp 0.8s ease forwards;
+}
+
+.slide-right.animated {
+    animation: slideRight 0.8s ease forwards;
+}
+
+.slide-left.animated {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+.zoom-in.animated {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hero Animation */
+.delivery-animation {
+    position: relative;
+}
+
+.delivery-animation svg {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+/* Animated Delivery Truck */
+@keyframes driveTruck {
+    0% {
+        transform: translateX(-100%) translateY(0);
+    }
+    20% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    40% {
+        transform: translateX(0) translateY(0);
+    }
+    60% {
+        transform: translateX(50%) translateY(-10px);
+    }
+    80% {
+        transform: translateX(100%) translateY(0);
+    }
+    100% {
+        transform: translateX(-100%) translateY(0);
+    }
+}
+
+@keyframes rotateTruckWheels {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.truck-container {
+    animation: driveTruck 15s linear infinite;
+}
+
+.truck-wheel {
+    transform-origin: center;
+    animation: rotateTruckWheels 2s linear infinite;
+}
+
+/* Order Form Animation */
+.order-form-container {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.order-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.order-form .form-control {
+    transition: all 0.3s ease;
+}
+
+.order-form .form-control:focus {
+    transform: translateY(-3px);
+}
+
+/* Timeline Animation */
+.timeline::after {
+    position: relative;
+    animation: growLine 2s ease forwards;
+}
+
+@keyframes growLine {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.timeline-dot {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(57, 103, 92, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(57, 103, 92, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(57, 103, 92, 0);
+    }
+}
+
+/* How it works SVG animations */
+.timeline-svg {
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover .timeline-svg {
+    filter: drop-shadow(0 0 5px rgba(57, 103, 92, 0.3));
+}
+
+/* SVG animation for each step */
+/* Step 1: Order SVG animation */
+@keyframes cursor-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(40px, 0);
+    }
+    50% {
+        transform: translate(40px, 15px);
+    }
+    75% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.timeline-item:first-child .timeline-svg circle {
+    animation: cursor-move 5s infinite ease-in-out;
+}
+
+/* Step 2: Pickup SVG animation */
+@keyframes pickup-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.timeline-item:nth-child(2) .timeline-svg g {
+    animation: pickup-bounce 2s infinite ease-in-out;
+}
+
+/* Step 3: Delivery truck animation */
+@keyframes truck-drive {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+.timeline-item:nth-child(3) .timeline-svg g {
+    animation: truck-drive 3s infinite linear;
+}
+
+/* Step 4: Checkmark animation */
+@keyframes check-pop {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.timeline-item:nth-child(4) .timeline-svg circle {
+    animation: check-pop 2s 1s forwards;
+}
+
+/* Timeline connecting arrows animation */
+@keyframes arrow-pulse {
+    0% {
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+}
+
+.connecting-arrow {
+    animation: arrow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes arrow-flow {
+    0% {
+        stroke-dashoffset: 200;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.connecting-arrow .arrow-path {
+    animation: arrow-flow 2s infinite linear;
+}
+
+.connecting-arrow text {
+    animation: text-glow 2s infinite ease-in-out;
+}
+
+@keyframes text-glow {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 3px rgba(57, 103, 92, 0.3);
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+/* Timeline content entrance animation */
+.timeline-content {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.timeline-content.animated {
+    animation: content-appear 0.8s forwards;
+}
+
+@keyframes content-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced hover effect for timeline items */
+.timeline-content {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 20px 40px rgba(57, 103, 92, 0.3);
+    border-color: var(--primary-light);
+}
+
+.timeline-content:hover .timeline-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: gentle-pulse 1.5s infinite ease-in-out;
+}
+
+.timeline-content:hover .timeline-svg path {
+    fill: white;
+    stroke: white;
+    animation: svg-spin 3s ease-in-out;
+    transform-origin: center;
+}
+
+.timeline-content:hover h3,
+.timeline-content:hover p {
+    color: white;
+}
+
+/* WhatsApp Button Animation */
+.btn-whatsapp {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-whatsapp::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+/* Nav Animation */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    right: -100%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.nav-link:hover::before {
+    right: 0;
+}
+
+/* Footer Animation */
+.footer a {
+    position: relative;
+    display: inline-block;
+}
+
+.footer a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    right: 0;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.footer a:hover::before {
+    transform: scaleX(1);
+}
+
+/* No Animation Class (for accessibility) */
+.no-animation * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Loading Animation */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.loader div {
+    position: absolute;
+    border: 4px solid var(--primary-color);
+    opacity: 1;
+    border-radius: 50%;
+    animation: ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes ripple {
+    0% {
+        top: 35px;
+        left: 35px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+    }
+}
+
+/* New Hero Text Animation */
+.hero-text h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px) rotateY(90deg);
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    position: relative;
+    background: linear-gradient(45deg, var(--primary-dark), var(--primary-color), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+@keyframes char-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) rotateY(90deg) scale(0.5);
+        filter: blur(5px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) rotateY(0) scale(1.1);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.hero-title-char::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.hero-title-char.animated::after {
+    animation: line-appear 0.5s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes line-appear {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.hero-title-char.animated {
+    animation: char-appear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Light effect on hero title */
+.hero-text h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--gradient-position, center), rgba(57, 103, 92, 0.3) 0%, transparent 70%);
+    filter: blur(15px);
+    opacity: 0;
+    animation: light-effect 5s ease-in-out infinite alternate;
+    --gradient-position: center;
+}
+
+@keyframes light-effect {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+/* Scroll Down Button Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.scroll-down-btn i {
+    animation: bounce 2s infinite;
+} 

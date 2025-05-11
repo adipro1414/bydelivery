@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.bydeliveryisrael.com/sitemap.xml
+
+# Allow all bots to access the entire site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: / 

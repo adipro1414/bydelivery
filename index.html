@@ -3,13 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>משלוחים מהירים בכל הארץ</title>
+    <title>שירותי משלוחים מהירים בכל הארץ | ByDelivery</title>
+    <meta name="description" content="שירותי משלוחים מהירים ואמינים בכל הארץ, במחירים הזולים ביותר. משלוח מהיום להיום, משלוח אקספרס, משלוח עד הבית. הזמינו עכשיו!">
+    <meta name="keywords" content="משלוחים, שליחויות, משלוח מהיר, שירותי משלוחים, משלוח עד הבית, משלוח אקספרס, שליחויות בכל הארץ">
+    <meta name="author" content="ByDelivery">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.bydelivery.co.il/">
+    
+    <!-- Resource Hints לטעינה מהירה יותר -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Performance Optimization Meta Tags -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="theme-color" content="#39675c">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bydelivery.co.il/">
+    <meta property="og:title" content="שירותי משלוחים מהירים בכל הארץ | ByDelivery">
+    <meta property="og:description" content="שירותי משלוחים מהירים ואמינים בכל הארץ, במחירים הזולים ביותר. משלוח מהיום להיום, משלוח אקספרס, משלוח עד הבית. הזמינו עכשיו!">
+    <meta property="og:image" content="https://www.bydelivery.co.il/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.bydelivery.co.il/">
+    <meta property="twitter:title" content="שירותי משלוחים מהירים בכל הארץ | ByDelivery">
+    <meta property="twitter:description" content="שירותי משלוחים מהירים ואמינים בכל הארץ, במחירים הזולים ביותר. משלוח מהיום להיום, משלוח אקספרס, משלוח עד הבית. הזמינו עכשיו!">
+    <meta property="twitter:image" content="https://www.bydelivery.co.il/og-image.jpg">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/animations.css" media="(prefers-reduced-motion: no-preference)">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ByDelivery",
+      "url": "https://www.bydelivery.co.il",
+      "logo": "https://www.bydelivery.co.il/LOGO.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+972554426607",
+        "contactType": "customer service",
+        "areaServed": "IL",
+        "availableLanguage": ["Hebrew", "English"]
+      }
+    }
+    </script>
+    
+    <!-- Critical Inline CSS לטעינה מהירה של העמוד -->
+    <style>
+      :root {
+        --primary-color: #39675c;
+      }
+      body {
+        font-family: 'Heebo', sans-serif;
+        direction: rtl;
+      }
+      .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+      .hero-section {
+        padding-top: 180px;
+        min-height: 100vh;
+      }
+    </style>
+
+    <!-- Google Analytics & Tag Manager - העברת הקוד לסוף העמוד לביצועים טובים יותר -->
+
+    <!-- הוספת preload לתמונות קריטיות -->
+    <link rel="preload" href="LOGO.png" as="image" fetchpriority="high" type="image/png">
 </head>
 <body>
     <!-- Animated Background -->
@@ -20,6 +103,9 @@
         <div class="shape shape4"></div>
     </div>
 
+    <!-- סרגל התקדמות גלילה -->
+    <div class="scroll-progress-bar"></div>
+    
     <!-- Recent Delivery Notifications -->
     <div class="delivery-notifications">
         <div class="notification-container">
@@ -43,20 +129,28 @@
         <div class="accessibility-panel">
             <h3>אפשרויות נגישות</h3>
             <div class="accessibility-options">
-                <button id="increaseText" class="access-btn"><i class="bi bi-plus-lg"></i> הגדל טקסט</button>
-                <button id="decreaseText" class="access-btn"><i class="bi bi-dash-lg"></i> הקטן טקסט</button>
-                <button id="highContrast" class="access-btn"><i class="bi bi-circle-half"></i> ניגודיות גבוהה</button>
-                <button id="stopAnimation" class="access-btn"><i class="bi bi-pause-fill"></i> עצור אנימציות</button>
-                <a href="accessibility.html" class="access-btn"><i class="bi bi-file-text"></i> הצהרת נגישות</a>
+                <button id="increaseText" class="access-btn" aria-label="הגדל טקסט"><i class="bi bi-plus-lg"></i> הגדל טקסט</button>
+                <button id="decreaseText" class="access-btn" aria-label="הקטן טקסט"><i class="bi bi-dash-lg"></i> הקטן טקסט</button>
+                <button id="highContrast" class="access-btn" aria-label="ניגודיות גבוהה (כהה)"><i class="bi bi-circle-half"></i> ניגודיות גבוהה (כהה)</button>
+                <button id="lightContrast" class="access-btn" aria-label="ניגודיות גבוהה (בהירה)"><i class="bi bi-brightness-high"></i> ניגודיות גבוהה (בהירה)</button>
+                <button id="readableText" class="access-btn" aria-label="טקסט קריא"><i class="bi bi-type"></i> טקסט קריא</button>
+                <button id="keyboardAccess" class="access-btn" aria-label="ניווט מקלדת משופר"><i class="bi bi-keyboard"></i> ניווט מקלדת</button>
+                <button id="showAltText" class="access-btn" aria-label="הצג טקסט חלופי"><i class="bi bi-image-alt"></i> הצג טקסט חלופי</button>
+                <button id="stopAnimation" class="access-btn" aria-label="עצור אנימציות"><i class="bi bi-pause-fill"></i> עצור אנימציות</button>
+                <button id="resetAccess" class="access-btn access-btn-reset" aria-label="אפס הגדרות נגישות"><i class="bi bi-arrow-counterclockwise"></i> איפוס הגדרות</button>
+                <a href="accessibility.html" class="access-btn" aria-label="הצהרת נגישות"><i class="bi bi-file-text"></i> הצהרת נגישות</a>
             </div>
         </div>
     </div>
+
+    <!-- Skip to Main Content Link for Keyboard Users -->
+    <a href="#main-content" class="skip-to-content" aria-label="דלג לתוכן העיקרי">דלג לתוכן העיקרי</a>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="LOGO.png" alt="לוגו שירותי משלוחים" class="logo">
+                <img src="LOGO.png" alt="לוגו שירותי משלוחים - ByDelivery" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -83,254 +177,420 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-text">
-                    <h1 class="animate-on-scroll fade-in">משלוחים  סופר  מהירים</h1>
-                    <h2 class="animate-on-scroll fade-in delay-1">כי הזמן שלכם חשוב!</h2>
-                    <p class="animate-on-scroll fade-in delay-2">שליחות לכל יעד, פרטים ועסקיים! איסוף והפצה באותו יום!</p>
-                    <div class="hero-buttons animate-on-scroll fade-in delay-3">
-                        <a href="#order" class="btn btn-primary">הזמן משלוח</a>
-                        <a href="#services" class="btn btn-outline">השירותים שלנו</a>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 hero-text">
+                        <h1 class="animate-on-scroll fade-in">משלוחים  סופר  מהירים</h1>
+                        <h2 class="animate-on-scroll fade-in delay-1">כי הזמן שלכם חשוב!</h2>
+                        <p class="animate-on-scroll fade-in delay-2">שליחות לכל יעד, פרטים ועסקיים! איסוף והפצה באותו יום!</p>
+                        <div class="hero-buttons animate-on-scroll fade-in delay-3">
+                            <a href="#order" class="btn btn-primary">הזמן משלוח</a>
+                            <a href="#services" class="btn btn-outline">השירותים שלנו</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image animate-on-scroll fade-in">
+                            <div class="delivery-animation" aria-label="אנימציה של משאית משלוחים">
+                                <!-- SVG will be inserted here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-image animate-on-scroll fade-in">
-                        <div class="delivery-animation">
+            </div>
+            <div class="hero-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true" focusable="false">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,218.7C672,203,768,149,864,149.3C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+            
+        </section>
+
+        <!-- Promo Section - מקטע חדש -->
+        <section class="promo-section">
+            <!-- אנימציית פרטיקלס ברקע ברמת הסקציה -->
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
+            <!-- קו מפריד תחתון -->
+            <div class="promo-bottom-border"></div>
+            
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="promo-container animate-on-scroll fade-in">
+                            <!-- צורות רקע דקורטיביות -->
+                            <div class="discount-shape" style="top: -50px; right: 10%;"></div>
+                            <div class="discount-shape" style="bottom: -50px; left: 15%; animation-delay: 2s;"></div>
+                            
+                            <div class="promo-content">
+                                <!-- אייקון מחיר SVG חדש -->
+                                <svg class="promo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון מחיר מוזל">
+                                    <!-- רקע אייקון -->
+                                    <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.15)" />
+                                    
+                                    <!-- סמל שקל מרכזי -->
+                                    <text x="50" y="50" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">₪</text>
+                                    
+                                    <!-- קווים מסביב -->
+                                    <g stroke="white" stroke-width="2" opacity="0.7">
+                                        <line x1="20" y1="20" x2="30" y2="30" opacity="0.6">
+                                            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
+                                        </line>
+                                        <line x1="80" y1="20" x2="70" y2="30" opacity="0.7">
+                                            <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+                                        </line>
+                                        <line x1="80" y1="80" x2="70" y2="70" opacity="0.4">
+                                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite" />
+                                        </line>
+                                        <line x1="20" y1="80" x2="30" y2="70" opacity="0.5">
+                                            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.7s" repeatCount="indefinite" />
+                                        </line>
+                                    </g>
+                                    
+                                    <!-- אפקט פעימה -->
+                                    <circle cx="50" cy="50" r="35" fill="none" stroke="white" stroke-width="1" opacity="0.5">
+                                        <animate attributeName="r" values="35;40;35" dur="2s" repeatCount="indefinite" />
+                                        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite" />
+                                    </circle>
+                                </svg>
+                                
+                                <!-- כותרת ראשית -->
+                                <h2 class="promo-title animate-on-scroll fade-in delay-1">הכי זולים בארץ</h2>
+                                
+                                <!-- הבטחת מחיר במקום תצוגת מחיר -->
+                                <div class="price-guarantee animate-on-scroll fade-in delay-1">
+                                    <p class="guarantee-text">מתחייבים למחיר הכי טוב</p>
+                                </div>
+                                
+                                <!-- יתרונות -->
+                                <div class="price-features animate-on-scroll fade-in delay-2">
+
+                                    <div class="price-feature-item">
+                                        <i class="bi bi-check-circle-fill"></i> איסוף מהיר
+                                    </div>
+                                    <div class="price-feature-item">
+                                        <i class="bi bi-check-circle-fill"></i> ללא תוספות מחיר
+                                    </div>
+                                    <div class="price-feature-item">
+                                        <i class="bi bi-check-circle-fill"></i> משלוח אקספרס
+                                    </div>
+                                </div>
+                                
+                                <!-- כותרת משנה -->
+                                <p class="promo-subtitle animate-on-scroll fade-in delay-2">משלוחים מהירים בפריסה ארצית במחיר הטוב ביותר</p>
+                                
+                                <!-- כפתור הזמנה -->
+                                <a href="#order" class="btn btn-light animate-on-scroll fade-in delay-2">קבל הצעת מחיר</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="animate-on-scroll fade-in">השירותים שלנו</h2>
+                    <p class="animate-on-scroll fade-in delay-1">הפתרונות המושלמים לכל צרכי המשלוחים שלך</p>
+                </div>
+                
+                <!-- Featured Service Banner -->
+                <div class="featured-service mb-5 animate-on-scroll fade-in">
+                    <div class="row align-items-center bg-primary-light p-4 rounded-3">
+                        <div class="col-md-8">
+                            <h3 class="text-white mb-3">שירות משלוחים מהיום להיום</h3>
+                            <p class="text-white opacity-75 mb-0">קבל את המשלוח שלך מהיום להיום! שירות מהיר במיוחד ללקוחות שלנו.</p>
+                        </div>
+                        <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                            <a href="#order" class="btn btn-light">הזמן עכשיו</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" itemscope itemtype="https://schema.org/ItemList">
+                    <meta itemprop="itemListOrder" content="Unordered">
+                    <meta itemprop="numberOfItems" content="3">
+                    
+                    <div class="col-md-4 animate-on-scroll fade-in" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                        <meta itemprop="position" content="1">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <!-- Fast Delivery SVG -->
+                                <svg class="service-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון משלוח מהיר">
+                                    <path d="M19.15,8H17V6a2,2,0,0,0-2-2H3A2,2,0,0,0,1,6V16a1,1,0,0,0,1,1H3a3,3,0,0,0,6,0h6a3,3,0,0,0,6,0h1a1,1,0,0,0,1-1V11.85A3.86,3.86,0,0,0,19.15,8ZM6,18a1,1,0,1,1,1-1A1,1,0,0,1,6,18Zm4-3H9a3,3,0,0,0-6,0H3V6H15v9H10Zm8,3a1,1,0,1,1,1-1A1,1,0,0,1,18,18Zm3-3h-.78A3,3,0,0,0,15,15H17V10h2.15A1.86,1.86,0,0,1,21,11.85Z"/>
+                                </svg>
+                            </div>
+                            <h3 itemprop="name">משלוחים מהירים</h3>
+                            <p itemprop="description">משלוחים סופר מהירים לכל מקום בארץ. זמני הגעה מהירים ואמינים.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-on-scroll fade-in delay-1" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                        <meta itemprop="position" content="2">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <!-- Nationwide SVG -->
+                                <svg class="service-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון פריסה ארצית">
+                                    <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Zm3.36-11.75a1,1,0,0,0-1.41,0l-1.95,2-1.54-1.54a1,1,0,0,0-1.41,0L5.59,12.17A1,1,0,0,0,7,13.58l2.05-2,1.54,1.54a1,1,0,0,0,1.41,0L15.36,10A1,1,0,0,0,15.36,8.25Z"/>
+                                </svg>
+                            </div>
+                            <h3 itemprop="name">פריסה ארצית</h3>
+                            <p itemprop="description">שליחויות לכל נקודה בארץ, פרטיים ועסקיים. כיסוי מלא בפריסה ארצית.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-on-scroll fade-in delay-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                        <meta itemprop="position" content="3">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <!-- Affordable Price SVG -->
+                                <svg class="service-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון מחירים משתלמים">
+                                    <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20ZM9.5,10.5h5a1,1,0,0,0,0-2h-5a1,1,0,0,0,0,2Zm1,2h-1a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm3,0h-1a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Z"/>
+                                </svg>
+                            </div>
+                            <h3 itemprop="name">מחירים משתלמים</h3>
+                            <p itemprop="description">מחירים ללא תחרות - הכי משתלם! מחירים שיתאימו לכל תקציב.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Services -->
+                <div class="additional-services mt-5 pt-3">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h3 class="mb-4 animate-on-scroll fade-in">שירותים נוספים</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll fade-in">
+                            <div class="additional-service-item p-3 text-center border rounded">
+                                <i class="bi bi-box-seam display-5 text-primary mb-3" aria-hidden="true"></i>
+                                <h4>אריזה מקצועית</h4>
+                                <p class="mb-0">אריזה מאובטחת ומקצועית של חבילות</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll fade-in delay-1">
+                            <div class="additional-service-item p-3 text-center border rounded">
+                                <i class="bi bi-shield-check display-5 text-primary mb-3" aria-hidden="true"></i>
+                                <h4>ביטוח משלוחים</h4>
+                                <p class="mb-0">כל המשלוחים מבוטחים להגנה מלאה על המוצרים שלך</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll fade-in delay-2">
+                            <div class="additional-service-item p-3 text-center border rounded">
+                                <i class="bi bi-truck display-5 text-primary mb-3" aria-hidden="true"></i>
+                                <h4>שליחויות מיוחדות</h4>
+                                <p class="mb-0">שליחויות דחופות ומשלוחים גדולים או רגישים במיוחד</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll fade-in delay-3">
+                            <div class="additional-service-item p-3 text-center border rounded">
+                                <i class="bi bi-calendar-check display-5 text-primary mb-3" aria-hidden="true"></i>
+                                <h4>משלוחים בתזמון מראש</h4>
+                                <p class="mb-0">תיאום משלוח למועד ושעה שנוחים לך</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="order" class="order-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="animate-on-scroll fade-in">הזמנת משלוח</h2>
+                    <p class="animate-on-scroll fade-in delay-1">מלא את הפרטים ואנחנו נדאג לכל השאר</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 animate-on-scroll slide-right">
+                        <!-- Small conveyor animation above form -->
+                        <div class="mini-conveyor-container">
+                            <div class="mini-conveyor-animation" aria-label="אנימציה של מסוע חבילות">
+                                <!-- Small conveyor SVG will be inserted here by JS -->
+                            </div>
+                        </div>
+                        <div class="order-form-container">
+                            <form class="order-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">שם מלא</label>
+                                    <input type="text" class="form-control" id="name" required aria-required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="deliveryAddress" class="form-label">כתובת למשלוח</label>
+                                    <input type="text" class="form-control" id="deliveryAddress" required aria-required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="packageDetails" class="form-label">פרטי החבילה</label>
+                                    <textarea class="form-control" id="packageDetails" rows="3" aria-describedby="פרטי החבילה למשלוח"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <a href="https://wa.me/972554426607?text=היי,%20אני%20מעוניין%20בשירותי%20משלוחים" target="_blank" class="btn btn-primary btn-whatsapp">
+                                        <i class="bi bi-whatsapp" aria-hidden="true"></i> המשך בוואטסאפ
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 animate-on-scroll slide-left">
+                        <div class="order-image" aria-label="איור של אדם מחזיק חבילה">
                             <!-- SVG will be inserted here -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,218.7C672,203,768,149,864,149.3C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
-        
-        <!-- Scroll Down Button -->
-        <a href="#services" class="scroll-down-btn">
-            <span>גלול למטה</span>
-            <i class="bi bi-chevron-down"></i>
-        </a>
-    </section>
+            <!-- ZigZag Divider -->
+            <div class="zigzag-divider">
+                <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="fill: var(--primary-light); width: 100%; height: 40px;">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+                </svg>
+            </div>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="animate-on-scroll fade-in">השירותים שלנו</h2>
-                <p class="animate-on-scroll fade-in delay-1">הפתרונות המושלמים לכל צרכי המשלוחים שלך</p>
-            </div>
-            
-            <!-- Featured Service Banner -->
-            <div class="featured-service mb-5 animate-on-scroll fade-in">
-                <div class="row align-items-center bg-primary-light p-4 rounded-3">
-                    <div class="col-md-8">
-                        <h3 class="text-white mb-3">שירות משלוחים מהיום להיום</h3>
-                        <p class="text-white opacity-75 mb-0">קבל את המשלוח שלך מהיום להיום! שירות מהיר במיוחד ללקוחות שלנו.</p>
-                    </div>
-                    <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
-                        <a href="#order" class="btn btn-light">הזמן עכשיו</a>
-                    </div>
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-works-section">
+            <!-- אלמנט הדירוג בין הסקציות - עכשיו נמצא בסקציה הנכונה -->
+            <div class="section-gradient-transition-bottom"></div>
+            <div class="how-works-bg-pattern"></div>
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="animate-on-scroll fade-in">איך זה עובד?</h2>
+                    <p class="animate-on-scroll fade-in delay-1">תהליך פשוט ב-4 שלבים</p>
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4 animate-on-scroll slide-up">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <!-- Fast Delivery SVG -->
-                            <svg class="service-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.15,8H17V6a2,2,0,0,0-2-2H3A2,2,0,0,0,1,6V16a1,1,0,0,0,1,1H3a3,3,0,0,0,6,0h6a3,3,0,0,0,6,0h1a1,1,0,0,0,1-1V11.85A3.86,3.86,0,0,0,19.15,8ZM6,18a1,1,0,1,1,1-1A1,1,0,0,1,6,18Zm4-3H9a3,3,0,0,0-6,0H3V6H15v9H10Zm8,3a1,1,0,1,1,1-1A1,1,0,0,1,18,18Zm3-3h-.78A3,3,0,0,0,15,15H17V10h2.15A1.86,1.86,0,0,1,21,11.85Z"/>
-                            </svg>
-                        </div>
-                        <h3>משלוחים מהירים</h3>
-                        <p>משלוחים סופר מהירים לכל מקום בארץ. זמני הגעה מהירים ואמינים.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 animate-on-scroll slide-up delay-1">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <!-- Nationwide SVG -->
-                            <svg class="service-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Zm3.36-11.75a1,1,0,0,0-1.41,0l-1.95,2-1.54-1.54a1,1,0,0,0-1.41,0L5.59,12.17A1,1,0,0,0,7,13.58l2.05-2,1.54,1.54a1,1,0,0,0,1.41,0L15.36,10A1,1,0,0,0,15.36,8.25Z"/>
-                            </svg>
-                        </div>
-                        <h3>פריסה ארצית</h3>
-                        <p>שליחויות לכל נקודה בארץ, פרטיים ועסקיים. כיסוי מלא בפריסה ארצית.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 animate-on-scroll slide-up delay-2">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <!-- Affordable Price SVG -->
-                            <svg class="service-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20ZM9.5,10.5h5a1,1,0,0,0,0-2h-5a1,1,0,0,0,0,2Zm1,2h-1a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm3,0h-1a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Z"/>
-                            </svg>
-                        </div>
-                        <h3>מחירים משתלמים</h3>
-                        <p>מחירים ללא תחרות - הכי משתלם! מחירים שיתאימו לכל תקציב.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional Services -->
-            <div class="additional-services mt-5 pt-3">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h3 class="mb-4 animate-on-scroll fade-in">שירותים נוספים</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll slide-up">
-                        <div class="additional-service-item p-3 text-center border rounded">
-                            <i class="bi bi-box-seam display-5 text-primary mb-3"></i>
-                            <h4>אריזה מקצועית</h4>
-                            <p class="mb-0">אריזה מאובטחת ומקצועית של חבילות</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll slide-up delay-1">
-                        <div class="additional-service-item p-3 text-center border rounded">
-                            <i class="bi bi-shield-check display-5 text-primary mb-3"></i>
-                            <h4>ביטוח משלוחים</h4>
-                            <p class="mb-0">כל המשלוחים מבוטחים להגנה מלאה על המוצרים שלך</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll slide-up delay-2">
-                        <div class="additional-service-item p-3 text-center border rounded">
-                            <i class="bi bi-truck display-5 text-primary mb-3"></i>
-                            <h4>שליחויות מיוחדות</h4>
-                            <p class="mb-0">שליחויות דחופות ומשלוחים גדולים או רגישים במיוחד</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll slide-up delay-3">
-                        <div class="additional-service-item p-3 text-center border rounded">
-                            <i class="bi bi-calendar-check display-5 text-primary mb-3"></i>
-                            <h4>משלוחים בתזמון מראש</h4>
-                            <p class="mb-0">תיאום משלוח למועד ושעה שנוחים לך</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Section -->
-    <section id="order" class="order-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="animate-on-scroll fade-in">הזמנת משלוח</h2>
-                <p class="animate-on-scroll fade-in delay-1">מלא את הפרטים ואנחנו נדאג לכל השאר</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-6 animate-on-scroll slide-right">
-                    <!-- Small conveyor animation above form -->
-                    <div class="mini-conveyor-container">
-                        <div class="mini-conveyor-animation">
-                            <!-- Small conveyor SVG will be inserted here by JS -->
-                        </div>
-                    </div>
-                    <div class="order-form-container">
-                        <form class="order-form">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">שם מלא</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="deliveryAddress" class="form-label">כתובת למשלוח</label>
-                                <input type="text" class="form-control" id="deliveryAddress" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="packageDetails" class="form-label">פרטי החבילה</label>
-                                <textarea class="form-control" id="packageDetails" rows="3"></textarea>
-                            </div>
-                            <div class="text-center">
-                                <a href="https://wa.me/972554426607?text=היי,%20אני%20מעוניין%20בשירותי%20משלוחים" target="_blank" class="btn btn-primary btn-whatsapp">
-                                    <i class="bi bi-whatsapp"></i> המשך בוואטסאפ
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 animate-on-scroll slide-left">
-                    <div class="order-image">
-                        <!-- SVG will be inserted here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-works-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="animate-on-scroll fade-in">איך זה עובד?</h2>
-                <p class="animate-on-scroll fade-in delay-1">תהליך פשוט ב-4 שלבים</p>
-            </div>
-            <div class="row">
-                <div class="timeline">
-                    <div class="timeline-item animate-on-scroll slide-right">
-                        <div class="timeline-dot"></div>
+                
+                <div class="timeline" itemscope itemtype="https://schema.org/HowTo">
+                    <meta itemprop="name" content="איך להזמין משלוח מהיר">
+                    <meta itemprop="description" content="מדריך פשוט להזמנת משלוח מהיר בארבעה שלבים">
+                    <meta itemprop="totalTime" content="PT15M">
+                    
+                    <!-- Timeline Step 1 -->
+                    <div class="timeline-item animate-on-scroll slide-right" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                        <meta itemprop="position" content="1">
+                        <div class="timeline-dot" aria-hidden="true"></div>
                         <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <!-- Order SVG -->
-                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19,3H5A3,3,0,0,0,2,6v8a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V6A3,3,0,0,0,19,3Zm1,11a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V6A1,1,0,0,1,5,5H19a1,1,0,0,1,1,1ZM7,15h7.5a1,1,0,0,0,0-2H7a1,1,0,0,0,0,2ZM12,8a1,1,0,0,0-1-1H7A1,1,0,0,0,7,9h4A1,1,0,0,0,12,8Zm7,0a1,1,0,1,0-1,1A1,1,0,0,0,19,8Zm0,4a1,1,0,1,0-1,1A1,1,0,0,0,19,12Z"/>
+                            <div class="timeline-step-number">1</div>
+                            <div class="timeline-icon" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="contentUrl" content="https://www.bydeliveryisrael.com/images/step1-icon.svg">
+                                <!-- Order SVG - Colorful version -->
+                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון הזמנה">
+                                    <defs>
+                                        <linearGradient id="orderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#39675c;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#4a7c70;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M19,3H5A3,3,0,0,0,2,6v8a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V6A3,3,0,0,0,19,3Zm1,11a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V6A1,1,0,0,1,5,5H19a1,1,0,0,1,1,1ZM7,15h7.5a1,1,0,0,0,0-2H7a1,1,0,0,0,0,2ZM12,8a1,1,0,0,0-1-1H7A1,1,0,0,0,7,9h4A1,1,0,0,0,12,8Zm7,0a1,1,0,1,0-1,1A1,1,0,0,0,19,8Zm0,4a1,1,0,1,0-1,1A1,1,0,0,0,19,12Z" fill="url(#orderGradient)" />
                                 </svg>
                             </div>
-                            <h3>שלב 1: הזמנה</h3>
-                            <p>מלא את טופס ההזמנה או צור קשר דרך וואטסאפ עם פרטי המשלוח</p>
+                            <h3 itemprop="name">שלב 1: הזמנה</h3>
+                            <p itemprop="text">מלא את טופס ההזמנה או צור קשר דרך וואטסאפ עם פרטי המשלוח</p>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll slide-left">
-                        <div class="timeline-dot"></div>
+                    
+                    <!-- Timeline Step 2 -->
+                    <div class="timeline-item animate-on-scroll slide-left" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                        <meta itemprop="position" content="2">
+                        <div class="timeline-dot" aria-hidden="true"></div>
                         <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <!-- Pickup SVG -->
-                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.86,8.6l-1-4A1,1,0,0,0,21,4H3A1,1,0,0,0,2.2,4.6l-1,4a1,1,0,0,0,.21.85A1,1,0,0,0,2,10H4.3l.7,10A1,1,0,0,0,6,21H18a1,1,0,0,0,1-.95L19.7,10H22a1,1,0,0,0,.64-.23A1,1,0,0,0,22.86,8.6ZM4.58,6H19.42l.5,2H4.08ZM17.91,19H6.09l-.7-9H18.61Z"/>
+                            <div class="timeline-step-number">2</div>
+                            <div class="timeline-icon" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="contentUrl" content="https://www.bydeliveryisrael.com/images/step2-icon.svg">
+                                <!-- Pickup SVG - Colorful version -->
+                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון איסוף">
+                                    <defs>
+                                        <linearGradient id="pickupGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#f9a826;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#e69113;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M22.86,8.6l-1-4A1,1,0,0,0,21,4H3A1,1,0,0,0,2.2,4.6l-1,4a1,1,0,0,0,.21.85A1,1,0,0,0,2,10H4.3l.7,10A1,1,0,0,0,6,21H18a1,1,0,0,0,1-.95L19.7,10H22a1,1,0,0,0,.64-.23A1,1,0,0,0,22.86,8.6ZM4.58,6H19.42l.5,2H4.08ZM17.91,19H6.09l-.7-9H18.61Z" fill="url(#pickupGradient)" />
                                 </svg>
                             </div>
-                            <h3>שלב 2: איסוף</h3>
-                            <p>השליח שלנו יגיע לכתובת שמסרת לאיסוף החבילה</p>
+                            <h3 itemprop="name">שלב 2: איסוף</h3>
+                            <p itemprop="text">השליח שלנו יגיע לכתובת שמסרת לאיסוף החבילה במהירות וביעילות</p>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll slide-right">
-                        <div class="timeline-dot"></div>
+                    
+                    <!-- Timeline Step 3 -->
+                    <div class="timeline-item animate-on-scroll slide-right" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                        <meta itemprop="position" content="3">
+                        <div class="timeline-dot" aria-hidden="true"></div>
                         <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <!-- Delivery SVG -->
-                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.34,10.5H7.41A.5.5,0,0,1,7,9.9L8.32,7.13a.5.5,0,0,1,.81-.09l2.76,3.11a.5.5,0,0,1-.38.83H10.45a.5.5,0,0,0-.5.5V17.5a.5.5,0,0,1-.5.5h-.62a.5.5,0,0,1-.5-.5V11A.5.5,0,0,0,8.34,10.5ZM19,6H18V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V6H5A3,3,0,0,0,2,9v6a3,3,0,0,0,3,3h.09A1.93,1.93,0,0,0,5,19v1a2,2,0,0,0,2,2H8a2,2,0,0,0,2-2V19h4v1a2,2,0,0,0,2,2h1a2,2,0,0,0,2-2V19a1.93,1.93,0,0,0-.09-1H19a3,3,0,0,0,3-3V9A3,3,0,0,0,19,6ZM8,4h8V6H8ZM8,20H7V19H8Zm9,0H16V19h1Zm3-5a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9A1,1,0,0,1,5,8H19a1,1,0,0,1,1,1Z"/>
+                            <div class="timeline-step-number">3</div>
+                            <div class="timeline-icon" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="contentUrl" content="https://www.bydeliveryisrael.com/images/step3-icon.svg">
+                                <!-- Delivery SVG - Colorful version -->
+                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון משלוח">
+                                    <defs>
+                                        <linearGradient id="deliveryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#39675c;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#f9a826;stop-opacity:0.8" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M8.34,10.5H7.41A.5.5,0,0,1,7,9.9L8.32,7.13a.5.5,0,0,1,.81-.09l2.76,3.11a.5.5,0,0,1-.38.83H10.45a.5.5,0,0,0-.5.5V17.5a.5.5,0,0,1-.5.5h-.62a.5.5,0,0,1-.5-.5V11A.5.5,0,0,0,8.34,10.5ZM19,6H18V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V6H5A3,3,0,0,0,2,9v6a3,3,0,0,0,3,3h.09A1.93,1.93,0,0,0,5,19v1a2,2,0,0,0,2,2H8a2,2,0,0,0,2-2V19h4v1a2,2,0,0,0,2,2h1a2,2,0,0,0,2-2V19a1.93,1.93,0,0,0-.09-1H19a3,3,0,0,0,3-3V9A3,3,0,0,0,19,6ZM8,4h8V6H8ZM8,20H7V19H8Zm9,0H16V19h1Zm3-5a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9A1,1,0,0,1,5,8H19a1,1,0,0,1,1,1Z" fill="url(#deliveryGradient)" />
                                 </svg>
                             </div>
-                            <h3>שלב 3: משלוח</h3>
-                            <p>החבילה שלך בדרך למקום היעד בצורה המהירה והבטוחה ביותר</p>
+                            <h3 itemprop="name">שלב 3: משלוח</h3>
+                            <p itemprop="text">החבילה שלך בדרך למקום היעד בצורה המהירה והבטוחה ביותר</p>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll slide-left">
-                        <div class="timeline-dot"></div>
+                    
+                    <!-- Timeline Step 4 -->
+                    <div class="timeline-item animate-on-scroll slide-left" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+                        <meta itemprop="position" content="4">
+                        <div class="timeline-dot" aria-hidden="true"></div>
                         <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <!-- Delivery Complete SVG -->
-                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19.5,4H17V3a1,1,0,0,0-1-1H8A1,1,0,0,0,7,3V4H4.5A2.5,2.5,0,0,0,2,6.5v11A2.5,2.5,0,0,0,4.5,20h15A2.5,2.5,0,0,0,22,17.5V6.5A2.5,2.5,0,0,0,19.5,4ZM9,4h6V6H9ZM20,17.5A.5.5,0,0,1,19.5,18H4.5a.5.5,0,0,1-.5-.5V11H6.79a1,1,0,0,0,.39.28l3,1.18a3,3,0,0,0,1.16.23,3.24,3.24,0,0,0,1.46-.37l2.45-1.22A1,1,0,0,0,16,10h4Zm0-9.5H16a1,1,0,0,0-.45.11l-2.44,1.22a1.19,1.19,0,0,1-1,.05l-3-1.19A1,1,0,0,0,8,8H4V6.5A.5.5,0,0,1,4.5,6h15a.5.5,0,0,1,.5.5Z"/>
+                            <div class="timeline-step-number">4</div>
+                            <div class="timeline-icon" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="contentUrl" content="https://www.bydeliveryisrael.com/images/step4-icon.svg">
+                                <!-- Delivery Complete SVG - Colorful version -->
+                                <svg class="timeline-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="אייקון מסירה">
+                                    <defs>
+                                        <linearGradient id="completeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4a7c70;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#39675c;stop-opacity:1" />
+                                        </linearGradient>
+                                        <radialGradient id="checkGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                            <stop offset="0%" style="stop-color:#f9a826;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#f9a826;stop-opacity:0.6" />
+                                        </radialGradient>
+                                    </defs>
+                                    <path d="M19.5,4H17V3a1,1,0,0,0-1-1H8A1,1,0,0,0,7,3V4H4.5A2.5,2.5,0,0,0,2,6.5v11A2.5,2.5,0,0,0,4.5,20h15A2.5,2.5,0,0,0,22,17.5V6.5A2.5,2.5,0,0,0,19.5,4ZM9,4h6V6H9ZM20,17.5A.5.5,0,0,1,19.5,18H4.5a.5.5,0,0,1-.5-.5V11H6.79a1,1,0,0,0,.39.28l3,1.18a3,3,0,0,0,1.16.23,3.24,3.24,0,0,0,1.46-.37l2.45-1.22A1,1,0,0,0,16,10h4Zm0-9.5H16a1,1,0,0,0-.45.11l-2.44,1.22a1.19,1.19,0,0,1-1,.05l-3-1.19A1,1,0,0,0,8,8H4V6.5A.5.5,0,0,1,4.5,6h15a.5.5,0,0,1,.5.5Z" fill="url(#completeGradient)" />
+                                    <circle cx="12" cy="13" r="5" fill="url(#checkGradient)" opacity="0.3" />
                                 </svg>
                             </div>
-                            <h3>שלב 4: מסירה</h3>
-                            <p>השליח ימסור את החבילה ליעד הנדרש ויעדכן אותך על סיום המשלוח</p>
+                            <h3 itemprop="name">שלב 4: מסירה</h3>
+                            <p itemprop="text">השליח ימסור את החבילה ליעד הנדרש ויעדכן אותך על סיום המשלוח</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <!-- ZigZag Bottom Divider -->
+            <div class="zigzag-divider bottom">
+                <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; width: 100%; height: 40px; transform: rotate(180deg);">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+                </svg>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer id="contact" class="footer">
@@ -347,9 +607,9 @@
                         <h3>צור קשר</h3>
                         <ul class="contact-list">
                             <li><i class="bi bi-telephone-fill"></i> <a href="tel:+972554426607">055-442-6607</a></li>
-                            <li><i class="bi bi-envelope-fill"></i> <a href="mailto:info@delivery-service.co.il">info@delivery-service.co.il</a></li>
+                            <li><i class="bi bi-envelope-fill"></i> <a href="mailto:support@bydeliveryisrael.com">support@bydeliveryisrael.com</a></li>
                             <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/972554426607" target="_blank">שלח וואטסאפ</a></li>
-                            <li><i class="bi bi-building"></i> תל אביב, ישראל</li>
+                            <li><i class="bi bi-building"></i> כל הארץ</li>
                         </ul>
                     </div>
                 </div>
@@ -367,16 +627,54 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 כל הזכויות שמורות ByDelivery  </p>
+                <p>&copy; כל הזכויות שמורות ByDelivery  </p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
-    <script src="js/animations.js"></script>
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/animations.js" defer></script>
     <script src="js/accessibility.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    
+    <!-- ביטול מסגרות פוקוס כתומות -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // הסרת כל הסגנונות של דפדפן ברירת מחדל
+            let style = document.createElement('style');
+            style.innerHTML = `
+                *:focus, *:hover, *:active, 
+                a:focus, a:hover, a:active,
+                button:focus, button:hover, button:active,
+                input:focus, textarea:focus, select:focus,
+                .nav-link:focus, .nav-link:hover, .nav-link:active,
+                .navbar-brand:focus {
+                    outline: none !important;
+                    box-shadow: none !important;
+                    -webkit-tap-highlight-color: transparent !important;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // גם לטיפול מיוחד באלמנטים מסוימים
+            document.querySelectorAll('a, button, input, textarea, select, [tabindex]').forEach(function(element) {
+                element.addEventListener('mousedown', function(e) {
+                    this.style.outline = 'none';
+                    this.style.boxShadow = 'none';
+                });
+                
+                element.addEventListener('touchstart', function(e) {
+                    this.style.outline = 'none';
+                    this.style.boxShadow = 'none';
+                }, {passive: true});
+            });
+        });
+    </script>
 </body>
 </html> 
